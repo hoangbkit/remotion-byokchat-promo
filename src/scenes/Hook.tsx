@@ -12,8 +12,8 @@ export const Hook: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
   const frame = useCurrentFrame();
   const L = useLayout();
   const at = useAt(scene);
-  const iconP = useSpring(6, 11, 110, 0.9);
-  const rot = (1 - iconP) * -14;
+  const iconP = useSpring(0, 11, 110, 0.9);
+  const rot = (1 - iconP) * -8;
   const tTitle = at("Meet", 28);
   const tTag = at("The", 70) + 4;
   const tKey = at("API", 105);
@@ -25,12 +25,12 @@ export const Hook: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
 
   return (
     <div style={{ position: "absolute", left: L.cx - 540 * L.stageK, top: L.stageTop, width: 1080, height: 1080, transform: `scale(${L.stageK})`, transformOrigin: "top left", fontFamily: FONT }}>
-      <Sfx name="impact" at={5} volume={0.7} />
+      <Sfx name="impact" at={0} volume={0.7} />
       <Sfx name="shimmer" at={tKey + 2} volume={0.35} />
       <Sfx name="chime" at={tKey + 32} volume={0.4} />
 
       {/* ripples */}
-      {[10, 26, 42].map((d, i) => {
+      {[2, 18, 34].map((d, i) => {
         const p = interpolate(frame - d, [0, 46], [0, 1], { ...clamp, easing: easeOut });
         return (
           <div
@@ -48,9 +48,9 @@ export const Hook: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
           />
         );
       })}
-      <div style={{ position: "absolute", left: 540 - 260, top: 330 - 260, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(closest-side, rgba(92,168,255,0.38), rgba(92,168,255,0))", opacity: iconP }} />
+      <div style={{ position: "absolute", left: 540 - 260, top: 330 - 260, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(closest-side, rgba(92,168,255,0.38), rgba(92,168,255,0))", opacity: 0.65 + 0.35 * iconP }} />
 
-      <div style={{ position: "absolute", left: 540 - 120, top: 210 + float, width: 240, height: 240, transform: `scale(${0.55 + 0.45 * iconP}) rotate(${rot}deg)`, opacity: Math.min(1, iconP * 1.6) }}>
+      <div style={{ position: "absolute", left: 540 - 120, top: 210 + float, width: 240, height: 240, transform: `scale(${0.82 + 0.18 * iconP}) rotate(${rot}deg)`, opacity: 1 }}>
         <Img src={staticFile("icon.png")} style={{ width: 240, height: 240, borderRadius: 54, boxShadow: "0 26px 70px rgba(30,90,200,0.55)" }} />
       </div>
 

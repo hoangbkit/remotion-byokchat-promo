@@ -98,13 +98,13 @@ export const Headline: React.FC<{ text: string; delay?: number; accent?: number 
   );
 };
 
-/** Scene-level enter/exit. */
+/** Scene-level enter/exit. Pass `enter={0}` or `exit={0}` to disable fade on the first/last scene. */
 export const SceneFade: React.FC<{ duration: number; enter?: number; exit?: number; children?: React.ReactNode }> = ({ duration, enter = 12, exit = 12, children }) => {
   const frame = useCurrentFrame();
-  const ein = interpolate(frame, [0, enter], [0, 1], { ...clamp, easing: easeOut });
-  const eout = interpolate(frame, [duration - exit, duration], [1, 0], clamp);
+  const ein = enter > 0 ? interpolate(frame, [0, enter], [0, 1], { ...clamp, easing: easeOut }) : 1;
+  const eout = exit > 0 ? interpolate(frame, [duration - exit, duration], [1, 0], clamp) : 1;
   const o = Math.min(ein, eout);
-  const out = interpolate(frame, [duration - exit, duration], [0, 1], clamp);
+  const out = exit > 0 ? interpolate(frame, [duration - exit, duration], [0, 1], clamp) : 0;
   return (
     <div style={{ position: "absolute", inset: 0, opacity: o, transform: `translateY(${(1 - ein) * 22 - out * 18}px) scale(${1 + out * 0.012})`, filter: `blur(${out * 6}px)` }}>
       {children}

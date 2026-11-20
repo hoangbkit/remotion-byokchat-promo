@@ -62,7 +62,7 @@ export const Video: React.FC = () => (
       const Comp = COMPONENTS[sc.id];
       return (
         <Sequence key={sc.id} from={sc.start} durationInFrames={sc.duration} name={sc.id}>
-          <SceneFade duration={sc.duration} enter={i === 0 ? 1 : 12} exit={i === timeline.scenes.length - 1 ? 30 : 12}>
+          <SceneFade duration={sc.duration} enter={i === 0 ? 0 : 12} exit={i === timeline.scenes.length - 1 ? 0 : 12}>
             <Comp scene={sc} />
           </SceneFade>
           <Captions scene={sc} centered={sc.id === "hook" || sc.id === "cta"} />
