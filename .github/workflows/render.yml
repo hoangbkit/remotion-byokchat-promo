@@ -1,0 +1,104 @@
+name: Render Remotion Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      format:
+        description: 'Output format to render'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - '1:1'
+          - '16:9'
+          - '9:16'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: remotion-release-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: remotion-build-${{ github.run_id }}-${{ github.run_attempt }}
+      PROJECT_SLUG: ${{ github.event.repository.name }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Remotion browser
+        run: npx remotion browser ensure
+
+      - name: Render video
+        env:
+          FORMAT: ${{ inputs.format }}
+        run: |
+          set -euo pipefail
+          case "$FORMAT" in
+            '1:1')  npm run render ;;
+            '16:9') npm run render:wide ;;
+            '9:16') npm run render:tall ;;
+            all)    npm run render:all ;;
+            *) echo "error: unknown format: $FORMAT" >&2; exit 1 ;;
+          esac
+
+      - name: Stage release assets
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          videos=(out/*.mp4)
+          if (( ${#videos[@]} == 0 )); then
+            echo "error: render produced no MP4 files in out/" >&2
+            exit 1
+          fi
+
+          mkdir -p artifacts
+          for video in "${videos[@]}"; do
+            name="$(basename "$video" .mp4)"
+            cp "$video" "artifacts/${PROJECT_SLUG}-${name}-${RELEASE_TAG}.mp4"
+          done
+
+      - name: Verify release assets
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          assets=(artifacts/*.mp4)
+          if (( ${#assets[@]} == 0 )); then
+            echo "error: no release videos staged" >&2
+            exit 1
+          fi
+
+          for asset in "${assets[@]}"; do
+            test -s "$asset"
+            bytes=$(stat -c%s "$asset")
+            if (( bytes >= 2147483648 )); then
+              echo "error: $asset exceeds GitHub's 2 GiB release asset limit" >&2
+              exit 1
+            fi
+            echo "$asset: $bytes bytes"
+          done
+
+      - name: Create pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release create "$RELEASE_TAG" artifacts/*.mp4 \
+            --target "$GITHUB_SHA" \
+            --title "$RELEASE_TAG" \
+            --prerelease \
+            --generate-notes
