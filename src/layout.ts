@@ -38,28 +38,29 @@ export const computeLayout = (W: number, H: number): Layout => {
   if (ratio < 0.77) {
     const k = W / 1080;
     const padX = 72 * k;
-    const topPad = Math.max(56 * k, Math.round(H * 0.0625));
-    const bottomPad = Math.max(84 * k, Math.round(H * 0.094));
+    const topPad = 72 * k;
+    const bottomPad = 72 * k;
     const brandSize = 52 * k;
-    const headlineY = topPad + brandSize * 1.08 + 28 * k;
-    const headlineSize = Math.min(84 * k, Math.round(H * 0.056));
-    const headlineW = Math.min(W - 2 * padX, 10.5 * headlineSize);
-    const headlineH = headlineSize * 1.08 * 2;
-    const capH = 132 * k;
+    const headlineY = topPad + brandSize * 1.08 + 32 * k;
+    const headlineSize = Math.min(78 * k, Math.round(H * 0.052));
+    const headlineW = Math.min(W - 2 * padX, 9.75 * headlineSize);
+    const headlineBottom = headlineY + headlineSize * 1.08 * 2;
+    const capH = 116 * k;
     const capY = H - bottomPad - capH;
-    const uiGap = Math.max(28 * k, Math.round(H * 0.025));
-    const uiY = headlineY + headlineH + uiGap;
+    const availH = Math.max(240 * k, capY - headlineBottom);
+    const uiGap = Math.max(36 * k, Math.round(availH * 0.115));
+    const uiY = headlineBottom + uiGap;
     const uiH = Math.max(200 * k, capY - uiGap - uiY);
-    const stageK = Math.min(1.1 * k, (capY - uiGap - topPad) / 900);
-    const stageTop = (topPad + capY - uiGap) / 2 - 525 * stageK;
+    const stageK = Math.min(1.1 * k, (capY - topPad) / 960);
+    const stageTop = (topPad + capY) / 2 - 525 * stageK;
     return {
       mode: "tall", W, H, k, stageK, cx: W / 2, stageTop,
       brand: { x: padX, y: topPad, size: brandSize },
       headline: { x: padX, y: headlineY, w: headlineW, size: headlineSize },
       ui: { x: padX, y: uiY, w: W - 2 * padX, h: uiH },
       uiVAlign: "center",
-      captions: { x: 90 * k, y: capY, w: W - 180 * k, h: capH, size: 52 * k, align: "center" },
-      captionsCentered: { x: 90 * k, y: capY, w: W - 180 * k, h: capH, size: 52 * k, align: "center" },
+      captions: { x: 90 * k, y: capY, w: W - 180 * k, h: capH, size: 50 * k, align: "center" },
+      captionsCentered: { x: 90 * k, y: capY, w: W - 180 * k, h: capH, size: 50 * k, align: "center" },
     };
   }
   const k = Math.min(W, H) / 1080;
