@@ -55,7 +55,7 @@ export const Chat: React.FC<{ scene: SceneInfo }> = () => {
                   <Icon name="sparkle" size={22} />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <Title>Claude Sonnet 5</Title>
+                  <Title>Claude Opus 5.5</Title>
                   <Sub>Anthropic · Personal</Sub>
                 </div>
                 <Pill>
@@ -111,7 +111,7 @@ export const Chat: React.FC<{ scene: SceneInfo }> = () => {
             <div style={{ display: "flex", alignItems: "center", gap: 10, height: 46, padding: "0 8px 0 12px", borderRadius: 23, background: C.card, border: `1px solid ${sendGlow ? "rgba(92,168,255,0.55)" : C.border}`, boxShadow: sendGlow ? "0 0 0 3px rgba(92,168,255,0.14)" : "none" }}>
               <Icon name="plus" size={20} color={C.sub} />
               <div style={{ flex: 1, fontSize: 15, color: shownInput ? C.text : C.dim, whiteSpace: "nowrap", overflow: "hidden" }}>
-                {shownInput || "Message Claude Sonnet 5"}
+                {shownInput || "Message Claude Opus 5.5"}
                 {sendGlow && Math.floor(frame / 8) % 2 === 0 ? <span style={{ color: C.blue }}>|</span> : null}
               </div>
               <Icon name="mic" size={19} color={C.sub} />

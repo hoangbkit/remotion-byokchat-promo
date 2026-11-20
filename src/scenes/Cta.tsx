@@ -242,7 +242,7 @@ export const Cta: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
               }}
             >
               <div style={{ width: 8, height: 8, borderRadius: 4, background: C.green, boxShadow: `0 0 10px ${C.green}` }} />
-              Available on iPhone &amp; iPad
+              Available on iPhone
             </div>
 
             <div>

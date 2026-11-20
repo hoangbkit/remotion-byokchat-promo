@@ -82,8 +82,8 @@ export const Keys: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
             <Provider icon="wave" name="OpenRouter" sub="Multi-model access" at={tOR} />
-            <Provider icon="sparkle" name="Anthropic" sub="Claude Sonnet 5" at={tAN} />
-            <Provider icon="diamond" name="Gemini" sub="Gemini 3.6 Flash" at={tGE} />
+            <Provider icon="sparkle" name="Anthropic" sub="Claude Opus 5.5" at={tAN} />
+            <Provider icon="diamond" name="Gemini" sub="Gemini 4 Neon" at={tGE} />
             <Provider icon="globe" name="Local Server" sub="Compatible endpoint" at={tLO} last />
           </div>
 
@@ -93,7 +93,7 @@ export const Keys: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
                 <Icon name="badge" size={28} color={C.blue} />
                 <div style={{ flex: 1 }}>
                   <Sub style={{ fontWeight: 600, color: C.sub }}>Default model</Sub>
-                  <Title style={{ fontSize: 16 }}>Claude Sonnet 5 · Anthropic</Title>
+                  <Title style={{ fontSize: 16 }}>Claude Opus 5.5 · Anthropic</Title>
                 </div>
                 <Icon name="selector" size={20} color={C.sub} />
               </div>

@@ -64,7 +64,7 @@ export const Projects: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
               <div style={{ fontSize: 13.5, lineHeight: 1.35, color: C.sub, marginTop: 9 }}>Ship a minimal native AI workspace with direct provider access and safe tool use.</div>
               <div style={{ display: "flex", gap: 7, marginTop: 9 }}>
                 {([
-                  ["sparkle", "Sonnet 5", 34],
+                  ["sparkle", "Opus 5.5", 34],
                   ["cube", "3 MCP", 40],
                   ["paperclip", "6 files", 46],
                 ] as [IconName, string, number][]).map(([ic, label, d]) => (
