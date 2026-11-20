@@ -1,0 +1,13 @@
+Meet BYOK Chat. The AI chat app that runs on your own API keys.
+
+Chat with your favorite models. Stream answers, reason through documents, and work with files and tools.
+
+Add your own keys for OpenRouter, Anthropic, Gemini, or a local server. They stay in your keychain, and every request goes straight to your provider.
+
+Connect MCP tools, and choose what each chat is allowed to do. Always, ask first, or off.
+
+Keep chats, files, and instructions together in project workspaces.
+
+And always know what a request costs, with usage tracked right on your device.
+
+BYOK Chat. Your keys. Your models. Get it on the App Store.

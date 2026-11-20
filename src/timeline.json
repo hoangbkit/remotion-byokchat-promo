@@ -1,0 +1,620 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1080,
+  "totalFrames": 1544,
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "duration": 178,
+      "lead": 27,
+      "voiceFrames": 133,
+      "voiceFile": "voiceover/001.wav",
+      "text": "Meet BYOK Chat. The AI chat app that runs on your own API keys.",
+      "words": [
+        {
+          "w": "Meet",
+          "s": 28,
+          "e": 38
+        },
+        {
+          "w": "BYOK",
+          "s": 38,
+          "e": 47
+        },
+        {
+          "w": "Chat.",
+          "s": 47,
+          "e": 56
+        },
+        {
+          "w": "The",
+          "s": 61,
+          "e": 69
+        },
+        {
+          "w": "AI",
+          "s": 69,
+          "e": 75
+        },
+        {
+          "w": "chat",
+          "s": 75,
+          "e": 84
+        },
+        {
+          "w": "app",
+          "s": 84,
+          "e": 92
+        },
+        {
+          "w": "that",
+          "s": 92,
+          "e": 101
+        },
+        {
+          "w": "runs",
+          "s": 101,
+          "e": 111
+        },
+        {
+          "w": "on",
+          "s": 111,
+          "e": 116
+        },
+        {
+          "w": "your",
+          "s": 116,
+          "e": 126
+        },
+        {
+          "w": "own",
+          "s": 126,
+          "e": 133
+        },
+        {
+          "w": "API",
+          "s": 133,
+          "e": 141
+        },
+        {
+          "w": "keys.",
+          "s": 141,
+          "e": 150
+        }
+      ]
+    },
+    {
+      "id": "chat",
+      "start": 178,
+      "duration": 246,
+      "lead": 15,
+      "voiceFrames": 163,
+      "voiceFile": "voiceover/002.wav",
+      "text": "Chat with your favorite models. Stream answers, reason through documents, and work with files and tools.",
+      "words": [
+        {
+          "w": "Chat",
+          "s": 16,
+          "e": 24
+        },
+        {
+          "w": "with",
+          "s": 24,
+          "e": 31
+        },
+        {
+          "w": "your",
+          "s": 31,
+          "e": 38
+        },
+        {
+          "w": "favorite",
+          "s": 38,
+          "e": 51
+        },
+        {
+          "w": "models.",
+          "s": 51,
+          "e": 61
+        },
+        {
+          "w": "Stream",
+          "s": 65,
+          "e": 75
+        },
+        {
+          "w": "answers,",
+          "s": 75,
+          "e": 86
+        },
+        {
+          "w": "reason",
+          "s": 88,
+          "e": 99
+        },
+        {
+          "w": "through",
+          "s": 99,
+          "e": 110
+        },
+        {
+          "w": "documents,",
+          "s": 110,
+          "e": 124
+        },
+        {
+          "w": "and",
+          "s": 126,
+          "e": 132
+        },
+        {
+          "w": "work",
+          "s": 132,
+          "e": 139
+        },
+        {
+          "w": "with",
+          "s": 139,
+          "e": 147
+        },
+        {
+          "w": "files",
+          "s": 147,
+          "e": 155
+        },
+        {
+          "w": "and",
+          "s": 155,
+          "e": 161
+        },
+        {
+          "w": "tools.",
+          "s": 161,
+          "e": 170
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "start": 424,
+      "duration": 278,
+      "lead": 15,
+      "voiceFrames": 239,
+      "voiceFile": "voiceover/003.wav",
+      "text": "Add your own keys for OpenRouter, Anthropic, Gemini, or a local server. They stay in your keychain, and every request goes straight to your provider.",
+      "words": [
+        {
+          "w": "Add",
+          "s": 16,
+          "e": 22
+        },
+        {
+          "w": "your",
+          "s": 22,
+          "e": 30
+        },
+        {
+          "w": "own",
+          "s": 30,
+          "e": 36
+        },
+        {
+          "w": "keys",
+          "s": 36,
+          "e": 44
+        },
+        {
+          "w": "for",
+          "s": 44,
+          "e": 50
+        },
+        {
+          "w": "OpenRouter,",
+          "s": 50,
+          "e": 66
+        },
+        {
+          "w": "Anthropic,",
+          "s": 68,
+          "e": 83
+        },
+        {
+          "w": "Gemini,",
+          "s": 85,
+          "e": 95
+        },
+        {
+          "w": "or",
+          "s": 97,
+          "e": 102
+        },
+        {
+          "w": "a",
+          "s": 102,
+          "e": 106
+        },
+        {
+          "w": "local",
+          "s": 106,
+          "e": 115
+        },
+        {
+          "w": "server.",
+          "s": 115,
+          "e": 125
+        },
+        {
+          "w": "They",
+          "s": 129,
+          "e": 137
+        },
+        {
+          "w": "stay",
+          "s": 137,
+          "e": 144
+        },
+        {
+          "w": "in",
+          "s": 144,
+          "e": 149
+        },
+        {
+          "w": "your",
+          "s": 149,
+          "e": 157
+        },
+        {
+          "w": "keychain,",
+          "s": 157,
+          "e": 170
+        },
+        {
+          "w": "and",
+          "s": 172,
+          "e": 178
+        },
+        {
+          "w": "every",
+          "s": 178,
+          "e": 187
+        },
+        {
+          "w": "request",
+          "s": 187,
+          "e": 199
+        },
+        {
+          "w": "goes",
+          "s": 199,
+          "e": 207
+        },
+        {
+          "w": "straight",
+          "s": 207,
+          "e": 220
+        },
+        {
+          "w": "to",
+          "s": 220,
+          "e": 225
+        },
+        {
+          "w": "your",
+          "s": 225,
+          "e": 232
+        },
+        {
+          "w": "provider.",
+          "s": 232,
+          "e": 246
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "start": 702,
+      "duration": 228,
+      "lead": 15,
+      "voiceFrames": 162,
+      "voiceFile": "voiceover/004.wav",
+      "text": "Connect MCP tools, and choose what each chat is allowed to do. Always, ask first, or off.",
+      "words": [
+        {
+          "w": "Connect",
+          "s": 16,
+          "e": 29
+        },
+        {
+          "w": "MCP",
+          "s": 29,
+          "e": 36
+        },
+        {
+          "w": "tools,",
+          "s": 36,
+          "e": 46
+        },
+        {
+          "w": "and",
+          "s": 48,
+          "e": 55
+        },
+        {
+          "w": "choose",
+          "s": 55,
+          "e": 66
+        },
+        {
+          "w": "what",
+          "s": 66,
+          "e": 74
+        },
+        {
+          "w": "each",
+          "s": 74,
+          "e": 82
+        },
+        {
+          "w": "chat",
+          "s": 82,
+          "e": 91
+        },
+        {
+          "w": "is",
+          "s": 91,
+          "e": 96
+        },
+        {
+          "w": "allowed",
+          "s": 96,
+          "e": 109
+        },
+        {
+          "w": "to",
+          "s": 109,
+          "e": 114
+        },
+        {
+          "w": "do.",
+          "s": 114,
+          "e": 119
+        },
+        {
+          "w": "Always,",
+          "s": 124,
+          "e": 135
+        },
+        {
+          "w": "ask",
+          "s": 137,
+          "e": 144
+        },
+        {
+          "w": "first,",
+          "s": 144,
+          "e": 154
+        },
+        {
+          "w": "or",
+          "s": 156,
+          "e": 161
+        },
+        {
+          "w": "off.",
+          "s": 161,
+          "e": 168
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "start": 930,
+      "duration": 198,
+      "lead": 15,
+      "voiceFrames": 114,
+      "voiceFile": "voiceover/005.wav",
+      "text": "Keep chats, files, and instructions together in project workspaces.",
+      "words": [
+        {
+          "w": "Keep",
+          "s": 16,
+          "e": 24
+        },
+        {
+          "w": "chats,",
+          "s": 24,
+          "e": 34
+        },
+        {
+          "w": "files,",
+          "s": 36,
+          "e": 45
+        },
+        {
+          "w": "and",
+          "s": 47,
+          "e": 54
+        },
+        {
+          "w": "instructions",
+          "s": 54,
+          "e": 73
+        },
+        {
+          "w": "together",
+          "s": 73,
+          "e": 87
+        },
+        {
+          "w": "in",
+          "s": 87,
+          "e": 92
+        },
+        {
+          "w": "project",
+          "s": 92,
+          "e": 104
+        },
+        {
+          "w": "workspaces.",
+          "s": 104,
+          "e": 121
+        }
+      ]
+    },
+    {
+      "id": "costs",
+      "start": 1128,
+      "duration": 210,
+      "lead": 15,
+      "voiceFrames": 125,
+      "voiceFile": "voiceover/006.wav",
+      "text": "And always know what a request costs, with usage tracked right on your device.",
+      "words": [
+        {
+          "w": "And",
+          "s": 16,
+          "e": 22
+        },
+        {
+          "w": "always",
+          "s": 22,
+          "e": 32
+        },
+        {
+          "w": "know",
+          "s": 32,
+          "e": 40
+        },
+        {
+          "w": "what",
+          "s": 40,
+          "e": 47
+        },
+        {
+          "w": "a",
+          "s": 47,
+          "e": 51
+        },
+        {
+          "w": "request",
+          "s": 51,
+          "e": 62
+        },
+        {
+          "w": "costs,",
+          "s": 62,
+          "e": 71
+        },
+        {
+          "w": "with",
+          "s": 73,
+          "e": 80
+        },
+        {
+          "w": "usage",
+          "s": 80,
+          "e": 89
+        },
+        {
+          "w": "tracked",
+          "s": 89,
+          "e": 101
+        },
+        {
+          "w": "right",
+          "s": 101,
+          "e": 109
+        },
+        {
+          "w": "on",
+          "s": 109,
+          "e": 114
+        },
+        {
+          "w": "your",
+          "s": 114,
+          "e": 122
+        },
+        {
+          "w": "device.",
+          "s": 122,
+          "e": 132
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "start": 1338,
+      "duration": 206,
+      "lead": 18,
+      "voiceFrames": 116,
+      "voiceFile": "voiceover/007.wav",
+      "text": "BYOK Chat. Your keys. Your models. Get it on the App Store.",
+      "words": [
+        {
+          "w": "BYOK",
+          "s": 19,
+          "e": 27
+        },
+        {
+          "w": "Chat.",
+          "s": 27,
+          "e": 36
+        },
+        {
+          "w": "Your",
+          "s": 40,
+          "e": 48
+        },
+        {
+          "w": "keys.",
+          "s": 48,
+          "e": 56
+        },
+        {
+          "w": "Your",
+          "s": 61,
+          "e": 69
+        },
+        {
+          "w": "models.",
+          "s": 69,
+          "e": 80
+        },
+        {
+          "w": "Get",
+          "s": 85,
+          "e": 92
+        },
+        {
+          "w": "it",
+          "s": 92,
+          "e": 97
+        },
+        {
+          "w": "on",
+          "s": 97,
+          "e": 102
+        },
+        {
+          "w": "the",
+          "s": 102,
+          "e": 109
+        },
+        {
+          "w": "App",
+          "s": 109,
+          "e": 115
+        },
+        {
+          "w": "Store.",
+          "s": 115,
+          "e": 125
+        }
+      ]
+    }
+  ]
+}

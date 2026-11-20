@@ -1,0 +1,27 @@
+{
+  "name": "byok-promo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BYOK Chat - 1:1 promo video built with Remotion (recreated UI, music, SFX, voiceover)",
+  "scripts": {
+    "dev": "remotion studio",
+    "timeline": "node scripts/build-timeline.mjs",
+    "render": "node scripts/build-timeline.mjs && remotion render ByokPromo out/byok-promo-1x1.mp4",
+    "still": "remotion still ByokPromo out/still.png --frame=120",
+    "typecheck": "tsc --noEmit",
+    "normalize": "sh scripts/normalize-voiceover.sh",
+    "render:wide": "node scripts/build-timeline.mjs && remotion render ByokPromoWide out/byok-promo-16x9.mp4",
+    "render:tall": "node scripts/build-timeline.mjs && remotion render ByokPromoTall out/byok-promo-9x16.mp4",
+    "render:all": "node scripts/build-timeline.mjs && remotion render ByokPromo out/byok-promo-1x1.mp4 && remotion render ByokPromoWide out/byok-promo-16x9.mp4 && remotion render ByokPromoTall out/byok-promo-9x16.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.545",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.545"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}
