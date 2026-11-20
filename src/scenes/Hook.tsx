@@ -24,7 +24,7 @@ export const Hook: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
   const float = Math.sin(frame / 22) * 5;
 
   return (
-    <div style={{ position: "absolute", left: L.cx - 540 * L.k, top: L.stageTop, width: 1080, height: 1080, transform: `scale(${L.k})`, transformOrigin: "top left", fontFamily: FONT }}>
+    <div style={{ position: "absolute", left: L.cx - 540 * L.stageK, top: L.stageTop, width: 1080, height: 1080, transform: `scale(${L.stageK})`, transformOrigin: "top left", fontFamily: FONT }}>
       <Sfx name="impact" at={5} volume={0.7} />
       <Sfx name="shimmer" at={tKey + 2} volume={0.35} />
       <Sfx name="chime" at={tKey + 32} volume={0.4} />

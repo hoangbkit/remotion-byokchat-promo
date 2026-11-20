@@ -28,7 +28,7 @@ export const Cta: React.FC<{ scene: SceneInfo }> = ({ scene }) => {
   const float = Math.sin(frame / 24) * 4;
 
   return (
-    <div style={{ position: "absolute", left: L.cx - 540 * L.k, top: L.stageTop, width: 1080, height: 1080, transform: `scale(${L.k})`, transformOrigin: "top left", fontFamily: FONT }}>
+    <div style={{ position: "absolute", left: L.cx - 540 * L.stageK, top: L.stageTop, width: 1080, height: 1080, transform: `scale(${L.stageK})`, transformOrigin: "top left", fontFamily: FONT }}>
       <Sfx name="whoosh" at={0} volume={0.35} />
       <Sfx name="pop" at={4} volume={0.45} />
       {FEATURES.map((_, i) => (
